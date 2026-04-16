@@ -1515,71 +1515,92 @@
     </div>
 </section>
 
-<!-- =============== CURRICULUM (MINIMALIST LUXURY) =============== -->
-<section id="curriculum" class="bg-[#0a0a0a] py-24 px-6 relative overflow-hidden border-t border-[#D4AF37]/10">
+<!-- =============== CURRICULUM STAGES (REDESIGNED) =============== -->
+<section id="stages" class="bg-[#FDFBF7] py-24 px-6 relative overflow-hidden border-t border-[#D4AF37]/20">
     <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-20 reveal">
-            <span class="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-4 block font-['Tajawal']">المنهاج العلمي</span>
-            <h2 class="text-[#F5F5F5] text-4xl md:text-5xl font-['Amiri'] font-bold mb-6">المراحل الدراسية</h2>
-            <div class="w-20 h-[1px] bg-[#D4AF37] mx-auto mb-8"></div>
-            <p class="text-[#F5F5F5]/50 max-w-2xl mx-auto leading-relaxed font-['Tajawal'] text-sm md:text-base">
-                منهجٌ علميٌّ متدرّج يحاكي أصالة الحوزة العلمية، صُمّم ليرتقي بطالب العلم من الأساسيات إلى مرحلة البحث التخصصي.
+        <!-- Header with improved contrast -->
+        <div class="text-center mb-16 reveal">
+            <span class="text-[#D4AF37] text-sm font-bold tracking-[0.2em] uppercase mb-4 block font-['Tajawal']">المسار الأكاديمي</span>
+            <h2 class="text-[#D4AF37] text-4xl md:text-5xl font-['Amiri'] font-bold mb-6">المنهج العلمي المتدرج</h2>
+            <div class="w-24 h-1 bg-[#D4AF37] mx-auto mb-8 rounded-full opacity-60"></div>
+            <p class="text-[#1A1A1A] max-w-3xl mx-auto leading-loose font-['Tajawal'] text-base md:text-lg">
+                منهجٌ علميٌّ متدرّج يحاكي أصالة الحوزة العلمية، صُمّم ليرتقي بطالب العلم من الأساسيات والتمهيد إلى مرحلة <span class="font-bold border-b-2 border-[#D4AF37]">البحث الخارج</span>.
             </p>
         </div>
 
-        <!-- Mobile: Vertical Timeline | Desktop: Horizontal Grid -->
-        <div class="relative grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
+        <!-- Stages Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             
-            <!-- Stage 1 -->
-            <div class="reveal group relative bg-[#111111] border-r-2 md:border-r-0 md:border-t-2 border-[#D4AF37]/20 p-8 pt-10 hover:border-[#D4AF37] transition-all duration-500">
-                <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-[#D4AF37] text-[#0a0a0a] rounded-full flex items-center justify-center font-bold text-lg font-['Amiri'] shadow-[0_0_15px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform">١</div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-6">التمهيدي</h3>
-                <ul class="space-y-4 font-['Tajawal'] text-xs leading-relaxed text-[#F5F5F5]/70 group-hover:text-[#F5F5F5] transition-colors">
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>النحو الواضح، الصرف</span></li>
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>منهاج الصالحين، العقائد، المنطق</span></li>
-                </ul>
+            <!-- Card 1: التمهيدي -->
+            <div class="reveal group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+                <div class="mb-6 flex justify-center text-[#D4AF37]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-1.5"/><path d="M2 22l5-5"/><path d="M2 17l5 5"/><path d="M22 2L15 9"/></svg>
+                </div>
+                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">التمهيدي</h3>
+                <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">النحو الواضح، الصرف</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">منهاج الصالحين، العقائد</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">المنطق، سيرة الأئمة</p>
+                </div>
+                <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">01</div>
             </div>
 
-            <!-- Stage 2 -->
-            <div class="reveal reveal-delay-1 group relative bg-[#111111] border-r-2 md:border-r-0 md:border-t-2 border-[#D4AF37]/20 p-8 pt-10 hover:border-[#D4AF37] transition-all duration-500">
-                <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-[#D4AF37] text-[#0a0a0a] rounded-full flex items-center justify-center font-bold text-lg font-['Amiri'] shadow-[0_0_15px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform">٢</div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-6">المنهج</h3>
-                <ul class="space-y-4 font-['Tajawal'] text-xs leading-relaxed text-[#F5F5F5]/70 group-hover:text-[#F5F5F5] transition-colors">
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>قطر الندى، خلاصة المنطق</span></li>
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>شذوذ الذهب</span></li>
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>الموجز في الأصول</span></li>
-                </ul>
+            <!-- Card 2: المنهاج -->
+            <div class="reveal reveal-delay-1 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+                <div class="mb-6 flex justify-center text-[#D4AF37]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">المنهاج</h3>
+                <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">قطر الندى، خلاصة المنطق</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">منهاج الصالحين، الموجز</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">عقائد الإمامية</p>
+                </div>
+                <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">02</div>
             </div>
 
-            <!-- Stage 3 -->
-            <div class="reveal reveal-delay-2 group relative bg-[#111111] border-r-2 md:border-r-0 md:border-t-2 border-[#D4AF37]/20 p-8 pt-10 hover:border-[#D4AF37] transition-all duration-500">
-                <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-[#D4AF37] text-[#0a0a0a] rounded-full flex items-center justify-center font-bold text-lg font-['Amiri'] shadow-[0_0_15px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform">٣</div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-6">الشرائع</h3>
-                <ul class="space-y-4 font-['Tajawal'] text-xs leading-relaxed text-[#F5F5F5]/70 group-hover:text-[#F5F5F5] transition-colors">
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>شرائع الإسلام</span></li>
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>أصول الفقه للمظفر، شرح ابن عقيل</span></li>
-                </ul>
+            <!-- Card 3: الشرائع -->
+            <div class="reveal reveal-delay-2 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+                <div class="mb-6 flex justify-center text-[#D4AF37]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7V3M7 8v10M17 8v10M3 21h18M7 8c0-2.5 5-2.5 5 0M17 8c0-2.5-5-2.5-5 0M7 18c0 2.5 5 2.5 5 0M17 18c0 2.5-5 2.5-5 0"/></svg>
+                </div>
+                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">الشرائع</h3>
+                <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">شرائع الإسلام</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">أصول الفقه للمظفر</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">شرح ابن عقيل، منطق المظفر</p>
+                </div>
+                <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">03</div>
             </div>
 
-            <!-- Stage 4 -->
-            <div class="reveal reveal-delay-3 group relative bg-[#111111] border-r-2 md:border-r-0 md:border-t-2 border-[#D4AF37]/20 p-8 pt-10 hover:border-[#D4AF37] transition-all duration-500">
-                <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-[#D4AF37] text-[#0a0a0a] rounded-full flex items-center justify-center font-bold text-lg font-['Amiri'] shadow-[0_0_15px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform">٤</div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-6">اللمعة</h3>
-                <ul class="space-y-4 font-['Tajawal'] text-xs leading-relaxed text-[#F5F5F5]/70 group-hover:text-[#F5F5F5] transition-colors">
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>الروضة البهية</span></li>
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>الحلقات 1&2، البلاغة</span></li>
-                </ul>
+            <!-- Card 4: اللمعة -->
+            <div class="reveal reveal-delay-3 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+                <div class="mb-6 flex justify-center text-[#D4AF37]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">اللمعة</h3>
+                <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الروضة البهية</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الحلقات 1 & 2</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">البلاغة العربية</p>
+                </div>
+                <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">04</div>
             </div>
 
-            <!-- Stage 5 -->
-            <div class="reveal reveal-delay-4 group relative bg-[#111111] border-r-2 md:border-r-0 md:border-t-2 border-[#D4AF37]/20 p-8 pt-10 hover:border-[#D4AF37] transition-all duration-500">
-                <div class="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-10 h-10 bg-[#D4AF37] text-[#0a0a0a] rounded-full flex items-center justify-center font-bold text-lg font-['Amiri'] shadow-[0_0_15px_rgba(212,175,55,0.3)] group-hover:scale-110 transition-transform">٥</div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-6 text-wrap">الكفاية والمكاسب</h3>
-                <ul class="space-y-4 font-['Tajawal'] text-xs leading-relaxed text-[#F5F5F5]/70 group-hover:text-[#F5F5F5] transition-colors">
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>كتاب المكاسب (للشيخ الأنصاري)</span></li>
-                    <li class="flex items-start gap-3"><span class="text-[#D4AF37]">✦</span> <span>كفاية الأصول، الحلقة 3</span></li>
-                </ul>
+            <!-- Card 5: الكفاية والمكاسب -->
+            <div class="reveal reveal-delay-4 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+                <div class="mb-6 flex justify-center text-[#D4AF37]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">الكفاية والمكاسب</h3>
+                <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">المكاسب للشيخ الأنصاري</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">كفاية الأصول للآخوند</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الحلقات 3</p>
+                </div>
+                <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">05</div>
             </div>
+
         </div>
     </div>
 </section>
@@ -1620,62 +1641,6 @@
                     <p>بسم الله الرحمن الرحيم، إنّ مدرسة الإمامين الجوادين تمثّل نموذجاً متميّزاً في التعليم الحوزوي، إذ تجمع بين أصالة المنهج العلمي الحوزوي ورسالية الطالب في المجتمع.</p>
                 </div>
                 <div class="word-footer"><div class="word-line"></div><span class="word-date">1447 هـ</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- =============== STAGES =============== -->
-<section id="stages">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag"><i class="fa-solid fa-layer-group" style="margin-left:5px;"></i> الهيكل العلمي</span>
-            <h2 class="section-title">المراحل الدراسية <span>الحوزوية</span></h2>
-            <div class="section-line"></div>
-            <p class="section-subtitle">منهجٌ علميٌّ متدرّج من التمهيدي حتى الكفاية، تمهيداً لمرحلة البحث الخارج</p>
-        </div>
-        <div class="stages-grid">
-            <!-- Stage 1: Featured Curriculum Card -->
-            <div class="stage-card reveal" data-num="١" style="border-left: 1px solid rgba(197, 160, 89, 0.3); padding-left: 25px; margin-left: 5px;">
-                <div class="stage-num">١</div>
-                <div class="stage-name" style="color: var(--gold); font-family: 'Al-Jazeera-Arabic', sans-serif !important; font-weight: 700; font-size: 1.1rem; margin-bottom: 20px;">المرحلة الأولى - التمهيدي</div>
-                <div class="stage-books" style="text-align: right; line-height: 1.8;">
-                    <div style="color: #f8f8f8; font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-bahai" style="color: var(--gold); font-size: 11px;"></i> <span>مبادئ النحو والصرف</span>
-                    </div>
-                    <div style="color: #f8f8f8; font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-bahai" style="color: var(--gold); font-size: 11px;"></i> <span>آداب المتعلمين</span>
-                    </div>
-                    <div style="color: #f8f8f8; font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-bahai" style="color: var(--gold); font-size: 11px;"></i> <span>أحكام التجويد</span>
-                    </div>
-                    <div style="color: #f8f8f8; font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-bahai" style="color: var(--gold); font-size: 11px;"></i> <span>موجز المعاملات</span>
-                    </div>
-                    <div style="color: #f8f8f8; font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-bahai" style="color: var(--gold); font-size: 11px;"></i> <span>العقيدة</span>
-                    </div>
-                    <div style="color: #f8f8f8; font-size: 13.5px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-bahai" style="color: var(--gold); font-size: 11px;"></i> <span>موجز العبادات</span>
-                    </div>
-                </div>
-            </div>
-            <div class="stage-card reveal reveal-delay-1" data-num="٢"><div class="stage-num">٢</div><div class="stage-name">المنهاج</div><div class="stage-books"><span>منهاج الصالحين</span><span>قواعد فقهية</span><span>نحو متوسط</span></div></div>
-            <div class="stage-card reveal reveal-delay-2" data-num="٣"><div class="stage-num">٣</div><div class="stage-name">الشرائع</div><div class="stage-books"><span>شرائع الإسلام</span><span>معالم الأصول</span><span>مغني الطلاب</span></div></div>
-            <div class="stage-card reveal reveal-delay-3" data-num="٤"><div class="stage-num">٤</div><div class="stage-name">اللمعة</div><div class="stage-books"><span>الروضة البهية</span><span>قوانين الأصول</span><span>شرح الألفية</span></div></div>
-            <div class="stage-card reveal reveal-delay-4" data-num="٥"><div class="stage-num">٥</div><div class="stage-name">الكفاية والمكاسب</div><div class="stage-books"><span>كفاية الأصول</span><span>المكاسب للشيخ الأنصاري</span><span>تمهيد البحث الخارج</span></div></div>
-        </div>
-        <div class="subjects-section">
-            <h3 class="subjects-title"><div class="ornament">— ✦ —</div>العلوم والمواد المُدرَّسة</h3>
-            <div class="subjects-grid">
-                <div class="subject-card reveal"><div class="subject-icon"><i class="fa-solid fa-scale-balanced"></i></div><div><div class="subject-name">الفقه الإسلامي</div><div class="subject-desc">جميع أبواب الفقه بمراحله</div></div></div>
-                <div class="subject-card reveal reveal-delay-1"><div class="subject-icon"><i class="fa-solid fa-scroll"></i></div><div><div class="subject-name">أصول الفقه</div><div class="subject-desc">من المعالم حتى الكفاية</div></div></div>
-                <div class="subject-card reveal reveal-delay-2"><div class="subject-icon"><i class="fa-solid fa-pen-fancy"></i></div><div><div class="subject-name">اللغة العربية</div><div class="subject-desc">النحو والصرف والبلاغة</div></div></div>
-                <div class="subject-card reveal reveal-delay-3"><div class="subject-icon"><i class="fa-solid fa-brain"></i></div><div><div class="subject-name">العلوم العقلية</div><div class="subject-desc">المنطق والفلسفة والكلام</div></div></div>
-                <div class="subject-card reveal"><div class="subject-icon"><i class="fa-solid fa-book-open"></i></div><div><div class="subject-name">علوم القرآن</div><div class="subject-desc">التفسير والتجويد والقراءات</div></div></div>
-                <div class="subject-card reveal reveal-delay-1"><div class="subject-icon"><i class="fa-solid fa-heart"></i></div><div><div class="subject-name">الأخلاق والسلوك</div><div class="subject-desc">تزكية النفس والتربية الروحية</div></div></div>
-                <div class="subject-card reveal reveal-delay-2"><div class="subject-icon"><i class="fa-solid fa-clock-rotate-left"></i></div><div><div class="subject-name">التاريخ الإسلامي</div><div class="subject-desc">سيرة النبي وأهل البيت (ع)</div></div></div>
-                <div class="subject-card reveal reveal-delay-3"><div class="subject-icon"><i class="fa-solid fa-microphone"></i></div><div><div class="subject-name">إعداد المبلّغ</div><div class="subject-desc">برنامج المبلّغ الرسالي</div></div></div>
             </div>
         </div>
     </div>
