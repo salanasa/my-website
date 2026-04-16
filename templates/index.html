@@ -58,9 +58,12 @@
        CSS VARIABLES & DESIGN TOKENS
        =============================================*/
     :root {
-        --gold: #c5a059;
+        --gold: #D4AF37;
         --gold-light: #e2c285;
         --gold-dark: #8e7037;
+        --antique-gold: #D4AF37;
+        --ivory-light: #FCF9F2;
+        --charcoal: #2C2C2C;
         --gold-glow: rgba(197, 160, 89, 0.2);
         --dark: #0a0a0b;
         --dark2: #121214;
@@ -529,15 +532,14 @@
        ABOUT
        =============================================*/
     #about {
-        background: linear-gradient(rgba(255, 255, 240, 0.8), rgba(255, 255, 240, 0.8)), url('/static/pattern.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('/static/gallery/01c7122ba1eabb89c7987f0e51786a51_upscayl_4x_realesrgan_x4plus5.jpg');
+        background-repeat: repeat;
+        background-size: 100px;
         box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
         border-top: 1px solid rgba(212, 175, 55, 0.1);
         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
     }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: center; }
     .about-img-wrap {
         border-radius: 20px; overflow: hidden;
         box-shadow: var(--shadow-deep); position: relative;
@@ -572,13 +574,13 @@
         border-radius: 20px; padding: 5px 16px;
         font-size: 12px; font-weight: 600; margin-bottom: 14px;
     }
-    .about-title { font-size: 30px; color: var(--text-dark); line-height: 1.55; margin-bottom: 20px; font-weight: 700; }
+    .about-title { font-size: 32px; color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); line-height: 1.55; margin-bottom: 20px; font-weight: 700; }
     .about-title span { color: #D4AF37; }
-    .about-desc { font-size: 15px; color: var(--text-mid); line-height: 2.3; margin-bottom: 14px; }
+    .about-desc { font-size: 15.5px; color: #2C2C2C; line-height: 2.3; margin-bottom: 14px; font-weight: 500; }
     .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
     .about-feature {
         display: flex; align-items: flex-start; gap: 12px;
-        padding: 14px 15px; background: rgba(255, 255, 240, 0.05);
+        padding: 14px 15px; background: rgba(255, 255, 255, 0.5);
         border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.15);
         transition: var(--transition);
         backdrop-filter: blur(8px);
@@ -593,24 +595,26 @@
         color: var(--gold-dark); font-size: 14px; flex-shrink: 0;
         color: #D4AF37; font-size: 14px; flex-shrink: 0;
     }
-    .about-feature-text { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+    .about-feature-text { font-size: 13px; color: #2C2C2C; line-height: 1.7; font-weight: 600; }
     .about-feature-text strong { display: block; color: #D4AF37; margin-bottom: 2px; font-size: 13.5px; }
 
     /* =============================================
        WORDS / كلمة المدير
        =============================================*/
     #words { 
-        background: linear-gradient(rgba(255, 255, 240, 0.85), rgba(255, 255, 240, 0.85)), url('/static/pattern.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('/static/gallery/01c7122ba1eabb89c7987f0e51786a51_upscayl_4x_realesrgan_x4plus5.jpg');
+        background-repeat: repeat;
+        background-size: 100px;
+        padding: 100px 48px;
     }
-    .words-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1000px; margin: 0 auto; }
+    .words-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1140px; margin: 0 auto; }
     .word-card {
-        background: var(--white); border-radius: 20px; padding: 38px 34px;
-        border: 1px solid rgba(232,118,26,0.15);
-        box-shadow: var(--shadow); transition: var(--transition);
+        background: #FCF9F2; border-radius: 20px; padding: 38px 34px;
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        box-shadow: 0 15px 45px rgba(0,0,0,0.05); transition: var(--transition);
         position: relative; overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
     .word-card::before {
         content: ''; position: absolute; top: 0; right: 0; left: 0; height: 3px;
@@ -630,15 +634,15 @@
         box-shadow: var(--shadow-gold);
     }
     .word-person-info { flex: 1; }
-    .word-person-name { font-size: 19px; color: var(--text-dark); font-weight: 700; margin-bottom: 6px; }
+    .word-person-name { font-size: 20px; color: #D4AF37; font-weight: 700; margin-bottom: 6px; font-family: 'Al-Jazeera-Arabic', sans-serif !important; }
     .word-person-title {
         font-size: 12px; color: var(--gold-dark); font-weight: 600;
-        background: rgba(232,118,26,0.08);
-        border: 1px solid rgba(232,118,26,0.2);
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.2);
         border-radius: 20px; padding: 3px 12px; display: inline-block;
     }
     .word-quote-icon { font-size: 30px; color: #D4AF37; opacity: 0.3; flex-shrink: 0; }
-    .word-content p { font-size: 15px; color: #333333; line-height: 2.4; text-align: justify; position: relative; z-index: 1; font-weight: 500; }
+    .word-content p { font-size: 1.1rem; color: #222222; line-height: 2.1; text-align: justify; position: relative; z-index: 1; font-weight: 500; font-family: 'Al-Jazeera-Arabic', sans-serif !important; flex-grow: 1; }
     .word-footer { margin-top: 24px; display: flex; align-items: center; gap: 16px; }
     .word-line { flex: 1; height: 1px; background: linear-gradient(to left, rgba(232,118,26,0.25), transparent); }
     .word-date { font-size: 13px; color: var(--gold-dark); font-weight: 600; }
@@ -647,10 +651,9 @@
        STAGES
        =============================================*/
     #stages {
-        background-image: linear-gradient(rgba(255, 255, 240, 0.8), rgba(255, 255, 240, 0.8)), url('/static/pattern.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('/static/gallery/01c7122ba1eabb89c7987f0e51786a51_upscayl_4x_realesrgan_x4plus5.jpg');
+        background-repeat: repeat;
+        background-size: 100px;
         border-top: 1px solid rgba(212, 175, 55, 0.2);
         border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         padding-top: 96px;
@@ -708,10 +711,35 @@
     .subject-name { font-size: 14px; color: var(--text-dark); font-weight: 600; }
     .subject-desc { font-size: 11.5px; color: var(--text-mid); margin-top: 2px; }
 
+    /* Pattern Background Section Styles */
+    .pattern-bg-section {
+        position: relative !important;
+        background-image: url("{{ url_for('static', filename='images/image_25.png') }}") !important;
+        background-repeat: repeat !important;
+        background-size: 200px !important;
+        background-position: center !important;
+    }
+    .pattern-bg-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.85);
+        z-index: 1;
+    }
+    .pattern-bg-section .container {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    .pattern-bg-section h2, .pattern-bg-section h3, .pattern-bg-section .section-title, .pattern-bg-section .section-title span {
+        color: #D4AF37 !important;
+    }
+    .pattern-bg-section p, .pattern-bg-section .section-subtitle, .pattern-bg-section .teacher-bio, .pattern-bg-section .feature-desc, .pattern-bg-section .contact-intro {
+        color: #2C2C2C !important;
+    }
+
     /* =============================================
        TEACHERS
        =============================================*/
-    #teachers { background: var(--cream); }
     .teachers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
     .teacher-card {
         background: var(--white); border-radius: 20px; padding: 32px 20px;
@@ -835,37 +863,80 @@
        FAQ
        =============================================*/
     #faq { 
-        background: linear-gradient(rgba(255, 255, 240, 0.92), rgba(255, 255, 240, 0.92)), url('/static/pattern.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('/static/gallery/01c7122ba1eabb89c7987f0e51786a51_upscayl_4x_realesrgan_x4plus5.jpg');
+    #faq {
+        background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('/static/gallery/01c7122ba1eabb89c7987f0e51786a51_upscayl_4x_realesrgan_x4plus5.jpg');
+        background-repeat: repeat;
+        background-size: 100px;
     }
     .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
     .faq-item {
         background: var(--cream);
         border: 1px solid rgba(232,118,26,0.15);
         border-radius: 14px; overflow: hidden; transition: var(--transition);
+        background: #FFFFFF;
+        border-left: 5px solid #D4AF37;
+        border-right: 5px solid #D4AF37;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
     .faq-item.open { border-color: rgba(232,118,26,0.35); box-shadow: var(--shadow-gold); }
+    .faq-item.open {
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        transform: translateY(-2px);
+    }
     .faq-question {
         padding: 18px 22px; display: flex; align-items: center;
         justify-content: space-between; cursor: pointer;
-        font-size: 15px; font-weight: 700; color: #111111; gap: 14px;
+        font-size: 15px; font-weight: 700; color: #FFFFFF; gap: 14px;
+        padding: 22px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        color: #001F3F; /* Deep Navy */
+        gap: 15px;
         user-select: none;
+        background: #FFFFFF;
     }
     .faq-question i { color: var(--gold); font-size: 13px; transition: transform 0.3s ease; flex-shrink: 0; }
     .faq-item.open .faq-question i { transform: rotate(180deg); }
+    .faq-question i {
+        color: #D4AF37;
+        font-size: 14px;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .faq-item.open .faq-question i {
+        transform: rotate(180deg);
+    }
     .faq-answer {
         max-height: 0; overflow: hidden;
         transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
-        font-size: 14.5px; color: #444444; line-height: 2.1; padding: 0 22px;
+        font-size: 14.5px; color: #e0e0e0; line-height: 2.1; padding: 0 22px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.3s ease;
+        font-size: 15px;
+        color: #4A4A4A; /* Standard Dark Grey */
+        line-height: 1.9;
+        padding: 0 28px;
+        background: #FDFCF0; /* Light Ivory */
     }
     .faq-item.open .faq-answer { max-height: 300px; padding: 0 22px 20px; }
+    .faq-item.open .faq-answer {
+        max-height: 400px;
+        padding: 10px 28px 25px;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
 
     /* =============================================
        FEATURES
        =============================================*/
-    #features { background: var(--cream); }
     .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .feature-card {
         background: var(--white); border-radius: 18px; padding: 34px 28px;
@@ -965,7 +1036,6 @@
     /* =============================================
        CONTACT
        =============================================*/
-    #contact { background: var(--cream); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
     .contact-intro { font-size: 15px; color: var(--text-mid); line-height: 2.2; margin-bottom: 32px; }
     .contact-items { display: flex; flex-direction: column; gap: 14px; }
@@ -1225,48 +1295,67 @@
        FOOTER
        =============================================*/
     footer {
-        background: var(--dark);
-        border-top: 1px solid rgba(232,118,26,0.2);
+        background: #FCF9F2;
+        color: #2C2C2C;
+        padding: 60px 0 40px;
+        border-top: 4px solid #D4AF37;
+        width: 100%;
+        text-align: right;
+        direction: rtl;
     }
-    .footer-main {
-        padding: 60px 48px;
-        display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 40px; max-width: 1240px; margin: 0 auto;
+    .footer-container {
+        width: 100% !important;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 30px;
     }
-    .footer-logo { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
-    .footer-logo img { width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(232,118,26,0.35); object-fit: cover; }
-    .footer-logo-text h3 { font-size: 14.5px; color: var(--gold-light); line-height: 1.5; }
-    .footer-brand-desc { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 2.1; margin-bottom: 24px; }
-    .footer-social { display: flex; gap: 9px; flex-wrap: wrap; }
-    .footer-social a {
-        width: 36px; height: 36px;
-        background: rgba(232,118,26,0.08);
-        border: 1px solid rgba(232,118,26,0.18);
-        border-radius: 10px; display: flex; align-items: center; justify-content: center;
-        color: var(--gold-light); font-size: 13px; text-decoration: none;
-        transition: var(--transition);
+    .footer-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 30px;
+        align-items: start;
     }
-    .footer-social a:hover { background: var(--gold); color: var(--dark); transform: translateY(-3px); box-shadow: var(--shadow-gold); }
     .footer-col h4 {
-        font-size: 15px; color: var(--gold-light);
-        margin-bottom: 18px; padding-bottom: 10px;
-        border-bottom: 1px solid rgba(232,118,26,0.15);
+        color: #D4AF37 !important;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: 'Amiri', serif !important;
     }
-    .footer-links { list-style: none; }
-    .footer-links li { margin-bottom: 10px; }
-    .footer-links a {
-        color: rgba(255,255,255,0.44); text-decoration: none;
-        font-size: 13px; display: flex; align-items: center; gap: 8px;
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-logo-img {
+        width: 100px !important;
+        height: auto !important;
+        object-fit: contain;
+        border-radius: 8px;
+        border: 1px solid #D4AF37;
+    }
+    .footer-nav-links { list-style: none; padding: 0; }
+    .footer-nav-links li { margin-bottom: 15px; }
+    .footer-nav-links a {
+        color: #2C2C2C !important;
+        text-decoration: none;
+        font-size: 14px;
         transition: var(--transition);
     }
-    .footer-links a:hover { color: var(--gold-light); padding-right: 6px; }
-    .footer-links a i { font-size: 9px; color: var(--gold); }
-    .footer-bottom {
-        border-top: 1px solid rgba(255,255,255,0.05);
-        padding: 18px 48px; text-align: center;
-        font-size: 13px; color: rgba(255,255,255,0.3);
+    .footer-nav-links a:hover { color: #D4AF37 !important; padding-right: 5px; }
+    .footer-contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #2C2C2C; }
+    .footer-contact-item i { color: #D4AF37; width: 18px; text-align: center; }
+    .footer-social-row { display: flex !important; flex-direction: row !important; gap: 15px; margin-top: 20px; }
+    .footer-social-row a { color: #D4AF37; font-size: 20px; transition: var(--transition); }
+    .footer-social-row a:hover { transform: translateY(-3px); color: #8e7037; }
+    .footer-copyright {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        font-size: 13px;
+        color: #666;
     }
-    .footer-bottom span { color: var(--gold); }
 
     /* =============================================
        BACK TO TOP
@@ -1304,7 +1393,6 @@
         .stages-grid { grid-template-columns: repeat(3, 1fr); }
         .subjects-grid { grid-template-columns: repeat(2, 1fr); }
         .stats-grid { grid-template-columns: repeat(2, 1fr); }
-        .footer-main { grid-template-columns: 1fr 1fr; }
         .masonry-grid { column-count: 3; }
         .teachers-grid { grid-template-columns: repeat(3, 1fr); }
     }
@@ -1329,7 +1417,7 @@
         .features-grid { grid-template-columns: 1fr 1fr; }
         .contact-grid { grid-template-columns: 1fr; }
         .stages-grid { grid-template-columns: repeat(2, 1fr); }
-        .words-grid { grid-template-columns: 1fr; }
+        .words-grid { grid-template-columns: 1fr; gap: 30px; }
         section { padding: 64px 20px; }
         .top-bar { display: none; }
         .masonry-grid { column-count: 2; }
@@ -1355,8 +1443,6 @@
         .stages-grid { grid-template-columns: 1fr; }
         .subjects-grid { grid-template-columns: 1fr; }
         .about-features { grid-template-columns: 1fr; }
-        .benefits-grid { grid-template-columns: 1fr; }
-        .footer-main { grid-template-columns: 1fr; }
         .stats-grid { grid-template-columns: 1fr 1fr; }
         .popup-box { padding: 30px 20px; }
         .masonry-grid { column-count: 1; }
@@ -1502,11 +1588,11 @@
             <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> فتح باب القبول للسنة الدراسية 1447هـ</span>
             <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> التقديم للعراقيين فقط – العمر من 15 إلى 35 سنة</span>
             <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> المدرسة توفر السكن والطعام وهدية شهرية</span>
-            <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> للاستفسار: +964 773 300 0720</span>
+            <span class="marquee-item"><i class="fa-solid fa-circle" style="font: size 8px"></i> للاستفسار: +964 773 300 0720</span>
             <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> فتح باب القبول للسنة الدراسية 1447هـ</span>
             <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> التقديم للعراقيين فقط – العمر من 15 إلى 35 سنة</span>
             <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> المدرسة توفر السكن والطعام وهدية شهرية</span>
-            <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:6px;"></i> للاستفسار: +964 773 300 0720</span>
+            <span class="marquee-item"><i class="fa-solid fa-circle" style="font-size:8px;"></i> للاستفسار: +964 773 300 0720</span>
         </div>
     </div>
 </div>
@@ -1534,16 +1620,16 @@
                     <div class="about-badge-float"><span class="num">١٤٤٧</span><span class="lbl">العام الدراسي هـ</span></div>
                 </div>
             </div>
-            <div class="about-text reveal reveal-delay-1">
-                <span class="about-tag"><i class="fa-solid fa-mosque" style="margin-left:5px;"></i> تعريف بالمدرسة</span>
-                <h2 class="about-title">مؤسسةٌ حوزويةٌ رساليةٌ<br><span>في قلب كربلاء المقدسة</span></h2>
-                <p class="about-desc">مدرسةُ الإمامين الجوادين للعلوم الدينية مدرسةٌ حوزويةٌ تابعةٌ لممثّلية المرجع الديني الأعلى السيد السيستاني (دام ظلّه) في مدينة كربلاء المقدسة، ومنضويةٌ تحت لواء الحوزة العلمية في النجف الأشرف. تقع في شارع الشهداء، كربلاء، العراق.</p>
-                <p class="about-desc">تهدف المدرسة إلى إعداد جيلٍ حوزويٍّ رساليٍّ واعٍ، يحمل رسالة أهل البيت (عليهم السلام) ويعمل على نشر معارفهم في المجتمع.</p>
+            <div class="about-text reveal reveal-delay-1" style="background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(2px); border-radius: 15px; padding: 20px;">
+                <span class="about-tag" style="color: #000000;"><i class="fa-solid fa-mosque" style="margin-left:5px;"></i> تعريف بالمدرسة</span>
+                <h2 class="about-title" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">مؤسسةٌ حوزويةٌ رساليةٌ<br><span style="color: #D4AF37;">في قلب كربلاء المقدسة</span></h2>
+                <p class="about-desc" style="color: #000000;">مدرسةُ الإمامين الجوادين للعلوم الدينية مدرسةٌ حوزويةٌ تابعةٌ لممثّلية المرجع الديني الأعلى السيد السيستاني (دام ظلّه) في مدينة كربلاء المقدسة، ومنضويةٌ تحت لواء الحوزة العلمية في النجف الأشرف. تقع في شارع الشهداء، كربلاء، العراق.</p>
+                <p class="about-desc" style="color: #000000;">تهدف المدرسة إلى إعداد جيلٍ حوزويٍّ رساليٍّ واعٍ، يحمل رسالة أهل البيت (عليهم السلام) ويعمل على نشر معارفهم في المجتمع.</p>
                 <div class="about-features">
-                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-book"></i></div><div class="about-feature-text"><strong>منهج حوزوي رصين</strong>من التمهيدي حتى الكفاية والمكاسب</div></div>
-                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div><div class="about-feature-text"><strong>أساتذة مؤهلون</strong>نخبة من حوزويي كربلاء والنجف</div></div>
-                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-star-and-crescent"></i></div><div class="about-feature-text"><strong>تكوين شامل</strong>علمي وأخلاقي ورسالي متكامل</div></div>
-                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-location-dot"></i></div><div class="about-feature-text"><strong>كربلاء المقدسة</strong>شارع الشهداء – قرب كراج الأحياء</div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-book"></i></div><div class="about-feature-text" style="color: #000000;"><strong style="color: #000000;">منهج حوزوي رصين</strong>من التمهيدي حتى الكفاية والمكاسب</div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div><div class="about-feature-text" style="color: #000000;"><strong style="color: #000000;">أساتذة مؤهلون</strong>نخبة من حوزويي كربلاء والنجف</div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-star-and-crescent"></i></div><div class="about-feature-text" style="color: #000000;"><strong style="color: #000000;">تكوين شامل</strong>علمي وأخلاقي ورسالي متكامل</div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-location-dot"></i></div><div class="about-feature-text" style="color: #000000;"><strong style="color: #000000;">كربلاء المقدسة</strong>شارع الشهداء – قرب كراج الأحياء</div></div>
                 </div>
             </div> 
         </div>
@@ -1554,12 +1640,12 @@
 <section id="stages" class="relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
         <!-- Header with improved contrast -->
-        <div class="text-center mb-16 reveal">
-            <span class="text-[#D4AF37] text-sm font-bold tracking-[0.2em] uppercase mb-4 block font-['Tajawal']">المسار الأكاديمي</span>
-            <h2 class="text-[#D4AF37] text-4xl md:text-5xl font-['Amiri'] font-bold mb-6">المراحل الدراسية الحوزوية</h2>
+        <div class="text-center mb-16 reveal" style="background-color: rgba(252, 249, 242, 0.85); backdrop-filter: blur(4px); border-radius: 15px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <span class="text-sm font-bold tracking-[0.2em] uppercase mb-4 block font-['Tajawal']" style="color: #000000;">المسار الحوزوي</span>
+            <h2 class="text-4xl md:text-5xl font-['Amiri'] font-bold mb-6" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">المراحل الدراسية الحوزوية</h2>
             <div class="w-24 h-1 bg-[#D4AF37] mx-auto mb-8 rounded-full opacity-60"></div>
-            <p class="text-[#1A1A1A] max-w-3xl mx-auto leading-loose font-['Tajawal'] text-base md:text-lg">
-                منهجٌ علميٌّ متدرّج يحاكي أصالة الحوزة العلمية، صُمّم ليرتقي بطالب العلم من الأساسيات والتمهيد إلى مرحلة <span class="font-bold border-b-2 border-[#D4AF37]">البحث الخارج</span>.
+            <p class="max-w-3xl mx-auto leading-loose font-['Tajawal'] text-base md:text-lg" style="color: #2C2C2C; font-weight: 500;">
+                منهجٌ علميٌّ متدرّج يحاكي أصالة الحوزة العلمية، صُمّم ليرتقي بطالب العلم من الأساسيات والتمهيد إلى مرحلة <span style="color: #D4AF37; font-weight: 900;">البحث الخارج</span>.
             </p>
         </div>
 
@@ -1567,25 +1653,25 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             
             <!-- Card 1: التمهيدي -->
-            <div class="reveal group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+            <div class="reveal group border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative" style="background-color: #FCF9F2; opacity: 1;">
                 <div class="mb-6 flex justify-center text-[#D4AF37]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-1.5"/><path d="M2 22l5-5"/><path d="M2 17l5 5"/><path d="M22 2L15 9"/></svg>
+                    <i class="fa-solid fa-pen-fancy fa-3x"></i>
                 </div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">التمهيدي</h3>
-                <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">النحو الواضح، الصرف</p>
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">منهاج الصالحين، العقائد</p>
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">المنطق، سيرة الأئمة</p>
+                <h3 class="font-['Amiri'] text-2xl font-bold mb-4" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">التمهيدي</h3>
+                <div class="space-y-2 font-['Tajawal'] text-sm leading-relaxed" style="color: #000000;">
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10" style="color: #000000;">النحو الواضح، الصرف</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10" style="color: #000000;">منهاج الصالحين، العقائد</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10" style="color: #000000;">المنطق، سيرة الأئمة</p>
                 </div>
                 <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">01</div>
             </div>
 
             <!-- Card 2: المنهاج -->
-            <div class="reveal reveal-delay-1 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+            <div class="reveal reveal-delay-1 group border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative" style="background-color: #FCF9F2; opacity: 1;">
                 <div class="mb-6 flex justify-center text-[#D4AF37]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    <i class="fa-solid fa-book-open fa-3x"></i>
                 </div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">المنهاج</h3>
+                <h3 class="font-['Amiri'] text-2xl font-bold mb-4" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">المنهاج</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">قطر الندى، خلاصة المنطق</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">منهاج الصالحين، الموجز</p>
@@ -1595,11 +1681,11 @@
             </div>
 
             <!-- Card 3: الشرائع -->
-            <div class="reveal reveal-delay-2 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+            <div class="reveal reveal-delay-2 group border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative" style="background-color: #FCF9F2; opacity: 1;">
                 <div class="mb-6 flex justify-center text-[#D4AF37]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7V3M7 8v10M17 8v10M3 21h18M7 8c0-2.5 5-2.5 5 0M17 8c0-2.5-5-2.5-5 0M7 18c0 2.5 5 2.5 5 0M17 18c0 2.5-5 2.5-5 0"/></svg>
+                    <i class="fa-solid fa-scale-balanced fa-3x"></i>
                 </div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">الشرائع</h3>
+                <h3 class="font-['Amiri'] text-2xl font-bold mb-4" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">الشرائع</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">شرائع الإسلام</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">أصول الفقه للمظفر</p>
@@ -1609,11 +1695,11 @@
             </div>
 
             <!-- Card 4: اللمعة -->
-            <div class="reveal reveal-delay-3 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+            <div class="reveal reveal-delay-3 group border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative" style="background-color: #FCF9F2; opacity: 1;">
                 <div class="mb-6 flex justify-center text-[#D4AF37]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    <i class="fa-solid fa-sun fa-3x"></i>
                 </div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">اللمعة</h3>
+                <h3 class="font-['Amiri'] text-2xl font-bold mb-4" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">اللمعة</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الروضة البهية</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الحلقات 1 & 2</p>
@@ -1623,11 +1709,11 @@
             </div>
 
             <!-- Card 5: الكفاية والمكاسب -->
-            <div class="reveal reveal-delay-4 group bg-[#FFFFFF] border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative">
+            <div class="reveal reveal-delay-4 group border border-[#D4AF37]/30 rounded-2xl p-6 text-center shadow-md hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 relative" style="background-color: #FCF9F2; opacity: 1;">
                 <div class="mb-6 flex justify-center text-[#D4AF37]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    <i class="fa-solid fa-graduation-cap fa-3x"></i>
                 </div>
-                <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">الكفاية والمكاسب</h3>
+                <h3 class="font-['Amiri'] text-2xl font-bold mb-4" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">الكفاية والمكاسب</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">المكاسب للشيخ الأنصاري</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">كفاية الأصول للآخوند</p>
@@ -1644,48 +1730,48 @@
 <section id="words">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><i class="fa-solid fa-quote-right" style="margin-left:5px;"></i> كلمة المدير</span>
-            <h2 class="section-title">كلمة <span>المدير والمعاون</span></h2>
+            <span class="section-tag" style="color: #D4AF37; border-color: #D4AF37;"><i class="fa-solid fa-quote-right" style="margin-left: 7px;"></i> رسالة الإدارة</span>
+            <h2 class="section-title" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">كلمة <span style="color: #D4AF37;">الإدارة الموقرة</span></h2>
             <div class="section-line"></div>
         </div>
         <div class="words-grid">
-            <div class="word-card reveal">
+            <div class="word-card reveal" style="background-color: #FCF9F2; border-radius: 15px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                 <div class="word-card-header">
                     <div class="word-avatar"><i class="fa-solid fa-user-tie"></i></div>
                     <div class="word-person-info">
-                        <h3 class="word-person-name">الشيخ عبد الستار</h3>
-                        <span class="word-person-title">مدير مدرسة الإمامين الجوادين</span>
+                        <h3 class="word-person-name" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">الشيخ عبد الستار الحسناوي</h3>
+                        <span class="word-person-title" style="color: #000000;">مدير مدرسة الإمامين الجوادين الدينية</span>
                     </div>
                     <div class="word-quote-icon"><i class="fa-solid fa-quote-right"></i></div>
                 </div>
                 <div class="word-content">
-                    <p>بسم الله الرحمن الرحيم، يسعدنا في مدرسة الإمامين الجوادين للعلوم الدينية أن نرحّب بكم في هذا الصرح العلمي الرسالي، الذي يسعى إلى إعداد جيل واعٍ حامل لرسالة أهل البيت عليهم السلام.</p>
+                    <p style="color: #2C2C2C; font-weight: 500;">مدرستُنا إحدى المدارس الدينية الحوزوية في مدينة كربلاء المقدّسة، وهي تابعةٌ لممثليّة المرجع الديني الأعلى سماحة السيد السيستاني (مدّ ظلّه الشريف). وقد أخذت على عاتقها رسالةً علميةً تربويةً سامية، تتمثّل في تنشئة الطلبة وتأهيلهم تأهيلاً علمياً رصيناً، قائمًا على أسسٍ متينة من الفقه والأصول وسائر العلوم الإسلامية، مع العناية بالجوانب الأخلاقية والسلوكية التي تُعدّ ركيزةً أساسيةً في بناء الشخصية العلمية المتكاملة. وتسعى المدرسة إلى إعداد كوادر علمية قادرة على تحمّل مسؤولية التبليغ والإرشاد، وخدمة المجتمع بروحٍ رسالية واعية...</p>
                 </div>
-                <div class="word-footer"><div class="word-line"></div><span class="word-date">1447 هـ</span></div>
+                <div class="word-footer"><div class="word-line"></div><span class="word-date" style="color: #8e7037;">1447 هـ</span></div>
             </div>
-            <div class="word-card reveal reveal-delay-1">
+            <div class="word-card reveal reveal-delay-1" style="background-color: #FCF9F2; border-radius: 15px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                 <div class="word-card-header">
                     <div class="word-avatar"><i class="fa-solid fa-user-graduate"></i></div>
                     <div class="word-person-info">
-                        <h3 class="word-person-name">الشيخ محمد الجوراني</h3>
-                        <span class="word-person-title">معاون مدير مدرسة الإمامين الجوادين</span>
+                        <h3 class="word-person-name" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">الشيخ محمد الجوراني</h3>
+                        <span class="word-person-title" style="color: #000000;">معاون مدير مدرسة الإمامين الجوادين الدينية</span>
                     </div>
                     <div class="word-quote-icon"><i class="fa-solid fa-quote-right"></i></div>
                 </div>
                 <div class="word-content">
-                    <p>بسم الله الرحمن الرحيم، إنّ مدرسة الإمامين الجوادين تمثّل نموذجاً متميّزاً في التعليم الحوزوي، إذ تجمع بين أصالة المنهج العلمي الحوزوي ورسالية الطالب في المجتمع.</p>
+                    <p style="color: #2C2C2C; font-weight: 500;">إنّ مدرستنا، إلى جانب اهتمامها البالغ بالدرس والتحصيل العلمي بوصفه المطلب الأوّل لطلبة العلوم الدينية، تُعنى عنايةً خاصة بإعداد الطالب الرسالي المُبلِّغ، القادر على إيصال معارف الشريعة الإسلامية إلى الناس بأسلوبٍ واعٍ ومؤثّر. ومن هذا المنطلق، تعتمد المدرسة على إقامة الدورات التدريبية والورش التعليمية على مدار العام، بما يسهم في تنمية مهارات الطلبة وصقل قدراتهم العلمية والتبليغية. كما تتيح لطلبتها فرص المشاركة في البرامج والدورات التي تُقيمها سائر المعاهد، وورشات العمل التابعة للعتبتين المقدستين في كربلاء المقدسة، تعزيزًا لخبراتهم وانفتاحهم على مجالاتٍ أوسع من التعلم والتجربة. وتحرص المدرسة كذلك على تأهيل نخبةٍ من الطلبة للتدريس، وأخرى للبحث والكتابة، وثالثة للتبليغ والإرشاد، وفقًا لقابلياتهم واستعداداتهم...</p>
                 </div>
-                <div class="word-footer"><div class="word-line"></div><span class="word-date">1447 هـ</span></div>
+                <div class="word-footer"><div class="word-line"></div><span class="word-date" style="color: #8e7037;">1447 هـ</span></div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- =============== TEACHERS =============== -->
-<section id="teachers">
+<section id="teachers" class="pattern-bg-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><i class="fa-solid fa-chalkboard-user" style="margin-left:5px;"></i> الكادر التدريسي</span>
+            <span class="section-tag"><i class="fa-solid fa-chalkboard-user" style="margin: left 7px;px;"></i> الكادر التدريسي</span>
             <h2 class="section-title">أساتذة <span>مدرسة الإمامين الجوادين</span></h2>
             <div class="section-line"></div>
             <p class="section-subtitle">نخبةٌ من الأساتذة الحوزويين ذوي الخبرة والكفاءة العالية</p>
@@ -1705,7 +1791,7 @@
 <section id="admission">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag" style="background:rgba(232,118,26,0.12);color:var(--gold-light);border-color:rgba(232,118,26,0.3);"><i class="fa-solid fa-door-open" style="margin-left:5px;"></i> باب القبول مفتوح</span>
+            <span class="section-tag" style="background:rgba(232,118,26,0.12);color:var(--gold-light);border-color:rgba(232,118,26,0.3);"><i class="fa-solid fa-door-open" style="margin: left 7px;px;"></i> باب القبول مفتوح</span>
             <h2 class="section-title" style="color:white;">القبول والتسجيل <span>1447هـ</span></h2>
             <div class="section-line"></div>
             <p class="section-subtitle" style="color:rgba(255,255,255,0.55);">تُعلن المدرسة عن فتح باب القبول للدراسة الحوزوية للسنة الدراسية 1447 هـ</p>
@@ -1752,27 +1838,48 @@
 <section id="faq">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><i class="fa-solid fa-circle-question" style="margin-left:5px;"></i> الأسئلة الشائعة</span>
-            <h2 class="section-title">أسئلة <span>يسألها الطلاب</span></h2>
+            <span class="section-tag" style="color: #D4AF37; border-color: #D4AF37;"><i class="fa-solid fa-circle-question" style="margin-left: 7px;"></i> الأسئلة الشائعة</span>
+            <h2 class="section-title" style="color: #D4AF37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">أسئلة <span>يسألها الطلاب</span></h2>
             <div class="section-line"></div>
         </div>
         <div class="faq-list">
-            <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)">هل الدراسة في المدرسة مجانية؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">نعم، الدراسة مجانية تماماً، بل تتكفّل المدرسة بالسكن والطعام وتمنح الطالب هدية شهرية مناسبة.</div></div>
-            <div class="faq-item reveal reveal-delay-1"><div class="faq-question" onclick="toggleFaq(this)">ما الشهادة المطلوبة للقبول؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">يُشترط إكمال مرحلة المتوسطة على الأقل، مع استثناءات لحفظة القرآن والخطباء الحسينيين.</div></div>
-            <div class="faq-item reveal reveal-delay-2"><div class="faq-question" onclick="toggleFaq(this)">هل يُقبل غير العراقيين؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">في الوقت الحالي، التقديم مخصص للمواطنين العراقيين فقط.</div></div>
-            <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)">ما طبيعة الاختبار عند التقديم؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">بعد التدقيق على الاستمارة، يخضع المتقدم لاختبار حضوري داخل المدرسة خلال الدوام الرسمي.</div></div>
-            <div class="faq-item reveal reveal-delay-1"><div class="faq-question" onclick="toggleFaq(this)">كم تستغرق الدراسة الحوزوية؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">تشمل خمس مراحل: التمهيدي، المنهاج، الشرائع، اللمعة، الكفاية والمكاسب، تمهيداً لمرحلة البحث الخارج.</div></div>
-            <div class="faq-item reveal reveal-delay-2"><div class="faq-question" onclick="toggleFaq(this)">هل توفر المدرسة سكناً للطلاب؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">نعم، تتكفّل المدرسة بالسكن الملائم والطعام طوال فترة التحصيل لجميع الطلاب الملتحقين.</div></div>
-            <div class="faq-item reveal"><div class="faq-question" onclick="toggleFaq(this)">ما الجهة المشرفة على المدرسة؟<i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">تابعة لممثلية المرجع الديني الأعلى السيد السيستاني (دام ظله) في كربلاء المقدسة.</div></div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">هل الدراسة في المدرسة مجانية؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">نعم، الدراسة مجانية تماماً، بل تتكفّل المدرسة بالسكن والطعام وتمنح الطالب هدية شهرية مناسبة.</div>
+            </div>
+            <div class="faq-item reveal reveal-delay-1">
+                <div class="faq-question" onclick="toggleFaq(this)">ما الشهادة المطلوبة للقبول؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">يُشترط إكمال مرحلة المتوسطة على الأقل، مع استثناءات لحفظة القرآن والخطباء الحسينيين.</div>
+            </div>
+            <div class="faq-item reveal reveal-delay-2">
+                <div class="faq-question" onclick="toggleFaq(this)">هل يُقبل غير العراقيين؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">في الوقت الحالي، التقديم مخصص للمواطنين العراقيين فقط.</div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">ما طبيعة الاختبار عند التقديم؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">بعد التدقيق على الاستمارة، يخضع المتقدم لاختبار حضوري داخل المدرسة خلال الدوام الرسمي.</div>
+            </div>
+            <div class="faq-item reveal reveal-delay-1">
+                <div class="faq-question" onclick="toggleFaq(this)">كم تستغرق الدراسة الحوزوية؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">تشمل خمس مراحل: التمهيدي، المنهاج، الشرائع، اللمعة، الكفاية والمكاسب، تمهيداً لمرحلة البحث الخارج.</div>
+            </div>
+            <div class="faq-item reveal reveal-delay-2">
+                <div class="faq-question" onclick="toggleFaq(this)">هل توفر المدرسة سكناً للطلاب؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">نعم، تتكفّل المدرسة بالسكن الملائم والطعام طوال فترة التحصيل لجميع الطلاب الملتحقين.</div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">ما الجهة المشرفة على المدرسة؟ <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">تابعة لممثلية المرجع الديني الأعلى السيد السيستاني (دام ظله) في كربلاء المقدسة.</div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- =============== FEATURES =============== -->
-<section id="features">
+<section id="features" class="pattern-bg-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><i class="fa-solid fa-star" style="margin-left:5px;"></i> لماذا مدرستنا</span>
+            <span class="section-tag"><i class="fa-solid fa-star" style="margin-left:7px;"></i> لماذا مدرستنا</span>
             <h2 class="section-title">ما يُميّز <span>مدرسة الإمامين الجوادين</span></h2>
             <div class="section-line"></div>
         </div>
@@ -1791,7 +1898,7 @@
 <section id="photo-gallery">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag" style="background:rgba(212,175,55,0.1); color:var(--gold-light);"><i class="fa-solid fa-camera-retro" style="margin-left:5px;"></i> المكتبة المصورة</span>
+            <span class="section-tag" style="background:rgba(212,175,55,0.1); color:var(--gold-light);"><i class="fa-solid fa-camera-retro" style="margin: left 7px;px;"></i> المكتبة المصورة</span>
             <h2 class="section-title" style="color:var(--white);">جولة في <span>أروقة المدرسة</span></h2>
             <div class="section-line" style="background: linear-gradient(to left, var(--gold), transparent);"></div>
             <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">توثيق حي للحياة الدراسية والفعاليات الروحية والعلمية</p>
@@ -1866,10 +1973,10 @@
 </div>
 
 <!-- =============== CONTACT =============== -->
-<section id="contact">
+<section id="contact" class="pattern-bg-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag"><i class="fa-solid fa-envelope" style="margin-left:5px;"></i> تواصل معنا</span>
+            <span class="section-tag"><i class="fa-solid fa-envelope" style="margin: left 7px;px;"></i> تواصل معنا</span>
             <h2 class="section-title">نحن في <span>خدمتكم</span></h2>
             <div class="section-line"></div>
             <p class="section-subtitle">يسعدنا استقبال استفساراتكم خلال الدوام الرسمي للمدرسة</p>
@@ -1918,61 +2025,50 @@
 
 <!-- =============== FOOTER =============== -->
 <footer>
-    <div class="footer-main">
-        <div>
-            <div class="footer-logo">
-                <img src="https://i.ibb.co/8v1WMCg/logo-png.jpg" alt="شعار المدرسة">
-                <div class="footer-logo-text"><h3>مدرسة الإمامين الجوادين<br>للعلوم الدينية</h3></div>
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Col 1: Logo + Name -->
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="https://i.ibb.co/8v1WMCg/logo-png.jpg" alt="Logo" class="footer-logo-img">
+                    <h4>مدرسة الإمامين الجوادين للعلوم الدينية</h4>
+                </div>
             </div>
-            <p class="footer-brand-desc">صرحٌ حوزويٌّ رساليٌّ في كربلاء المقدسة تابع لممثلية المرجع الأعلى السيد السيستاني (دام ظله).</p>
-            <div class="footer-social">
-                <a href="https://t.me/aljawadin313" target="_blank" title="تيليغرام"><i class="fa-brands fa-telegram"></i></a>
-                <a href="https://www.instagram.com/aljawadin313" target="_blank" title="إنستغرام"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@al-jawadan3137/featured" target="_blank" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://whatsapp.com/channel/0029VaClEvFEawe06d75vj2h" target="_blank" title="قناة واتساب"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://x.com/Aljawadin313a" target="_blank" title="إكس"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/aljawadin313" target="_blank" title="فيسبوك"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://invite.viber.com/?g2=AQAEKefxM8u741LJoSk6KTl9peqnwtuGjNg1ncyHoZ3XzQs41yezD8FzyLy6Os24" target="_blank" title="فايبر"><i class="fa-brands fa-viber"></i></a>
-                <a href="https://linktr.ee/aljawadin313" target="_blank" title="لينك تري"><i class="fa-solid fa-link"></i></a>
-                <a href="mailto:aljawadan313@gmail.com" title="البريد"><i class="fa-solid fa-envelope"></i></a>
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-nav-links">
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">عن المدرسة</a></li>
+                    <li><a href="#words">كلمة المدير</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <!-- Col 3: Academic Levels -->
+            <div class="footer-col">
+                <h4>المراحل الدراسية</h4>
+                <ul class="footer-nav-links">
+                    <li><a href="#stages">المرحلة التمهيدية</a></li>
+                    <li><a href="#stages">مرحلة المنهاج</a></li>
+                    <li><a href="#stages">مرحلة الشرائع</a></li>
+                    <li><a href="#stages">مرحلة اللمعة</a></li>
+                    <li><a href="#stages">الكفاية والمكاسب</a></li>
+                </ul>
+            </div>
+            <!-- Col 4: Contact + Social -->
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> <span dir="ltr">+964 773 300 0720</span></div>
+                <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> <span>aljawadan313@gmail.com</span></div>
+                <div class="footer-social-row">
+                    <a href="https://t.me/aljawadin313" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VaClEvFEawe06d75vj2h" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/aljawadin313" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/aljawadin313" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                </div>
             </div>
         </div>
-        <div class="footer-col">
-            <h4>روابط سريعة</h4>
-            <ul class="footer-links">
-                <li><a href="#hero"><i class="fa-solid fa-angle-left"></i> الرئيسية</a></li>
-                <li><a href="#about"><i class="fa-solid fa-angle-left"></i> عن المدرسة</a></li>
-                <li><a href="#words"><i class="fa-solid fa-angle-left"></i> كلمة المدير</a></li>
-                <li><a href="#stages"><i class="fa-solid fa-angle-left"></i> المراحل الدراسية</a></li>
-                <li><a href="#teachers"><i class="fa-solid fa-angle-left"></i> أساتذة المدرسة</a></li>
-                <li><a href="#admission"><i class="fa-solid fa-angle-left"></i> القبول والتسجيل</a></li>
-                <li><a href="#gallery"><i class="fa-solid fa-angle-left"></i> المكتبة البصرية</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-angle-left"></i> تواصل معنا</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>المراحل الدراسية</h4>
-            <ul class="footer-links">
-                <li><a href="#stages"><i class="fa-solid fa-angle-left"></i> مرحلة التمهيدي</a></li>
-                <li><a href="#stages"><i class="fa-solid fa-angle-left"></i> مرحلة المنهاج</a></li>
-                <li><a href="#stages"><i class="fa-solid fa-angle-left"></i> مرحلة الشرائع</a></li>
-                <li><a href="#stages"><i class="fa-solid fa-angle-left"></i> مرحلة اللمعة</a></li>
-                <li><a href="#stages"><i class="fa-solid fa-angle-left"></i> الكفاية والمكاسب</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>اتصل بنا</h4>
-            <ul class="footer-links">
-                <li><a href="tel:+9647733000720" style="direction:ltr;justify-content:flex-end;"><i class="fa-solid fa-phone"></i> +964 773 300 0720</a></li>
-                <li><a href="mailto:aljawadan313@gmail.com"><i class="fa-solid fa-envelope"></i> aljawadan313@gmail.com</a></li>
-                <li><a href="https://www.google.com/maps/search/?api=1&query=32.6105822,43.9961555" target="_blank"><i class="fa-solid fa-location-dot"></i> شارع الشهداء، كربلاء، العراق</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        جميع الحقوق محفوظة &copy; 2026 —
-        <span>مدرسة الإمامين الجوادين للعلوم الدينية</span> —
-        كربلاء المقدسة، العراق
+        <div class="footer-copyright">جميع الحقوق محفوظة &copy; 1447 هـ - مدرسة الإمامين الجوادين للعلوم الدينية</div>
     </div>
 </footer>
 
