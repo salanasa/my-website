@@ -478,8 +478,20 @@
         font-size: 11px; font-weight: 600; margin-bottom: 16px;
         text-transform: uppercase; letter-spacing: 1px;
     }
-    .section-title { font-size: 32px; color: white; font-weight: 700; line-height: 1.3; margin-bottom: 14px; }
-    .section-title span { color: var(--gold); }
+    .section-title,
+    .about-title,
+    .magazine-title,
+    .issue-title,
+    #stages h2,
+    #stages span.tracking-\[0\.2em\] {
+        color: #D4AF37 !important;
+        background: none !important;
+        -webkit-text-fill-color: #D4AF37 !important;
+        background-clip: initial !important;
+        -webkit-background-clip: initial !important;
+        font-weight: 700 !important;
+    }
+    .section-title { font-size: 32px; line-height: 1.3; margin-bottom: 14px; }
     .section-line {
         width: 40px; height: 1px;
         background: var(--gold);
@@ -560,11 +572,14 @@
         border-radius: 20px; padding: 5px 16px;
         font-size: 12px; font-weight: 600; margin-bottom: 14px;
     }
-    .about-title { font-size: 30px; color: var(--text-dark); line-height: 1.55; margin-bottom: 20px; font-weight: 700; }
-    .about-title span { color: var(--gold-dark); }
+    .about-title {
+        font-size: 30px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+        font-family: 'Al-Jazeera-Arabic', sans-serif !important;
+    }
     .about-desc { font-size: 15px; color: var(--text-mid); line-height: 2.3; margin-bottom: 14px; }
     .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
-    .about-feature {
         display: flex; align-items: flex-start; gap: 12px;
         padding: 14px 15px; background: var(--cream);
         border-radius: 12px; border: 1px solid rgba(232,118,26,0.12);
@@ -1078,10 +1093,6 @@
         70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
         100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
     }
-    /* Adjust section header colors for dark background */
-    #magazine-section .section-title {
-        color: var(--white);
-    }
     #magazine-section .section-subtitle {
         color: rgba(255,255,255,0.6);
     }
@@ -1435,7 +1446,7 @@
                 <span>سورة التوبة – الآية 122</span>
             </div>
             <h1 class="hero-title">مدرسة<br><em>الإمامين الجوادين</em><br>للعلوم الدينية</h1>
-            <p class="hero-desc">صرحٌ حوزويٌّ رساليٌّ في كربلاء المقدسة، منضوٍ تحت لواء الحوزة العلمية في النجف الأشرف، يُعدّ جيلاً واعياً حاملاً لرسالة أهل البيت عليهم السلام.</p>
+            <p class="hero-desc">صرحٌ دينيٌّ رساليٌّ في كربلاء المقدسة، منضوٍ تحت لواء الحوزة العلمية في النجف الأشرف، يُعدّ جيلاً واعياً حاملاً لرسالة أهل البيت عليهم السلام.</p>
             <div class="hero-btns">
                 <a href="https://forms.gle/SYbrxcbR3HbPfRxv7" target="_blank" class="btn-primary"><i class="fa-solid fa-graduation-cap"></i> سجّل للعام 1447هـ</a>
                 <a href="#about" class="btn-outline"><i class="fa-solid fa-book-open"></i> تعرّف على المدرسة</a>
@@ -1501,11 +1512,11 @@
             </div>
             <div class="about-text reveal reveal-delay-1">
                 <span class="about-tag"><i class="fa-solid fa-mosque" style="margin-left:5px;"></i> تعريف بالمدرسة</span>
-                <h2 class="about-title">مؤسسةٌ حوزويةٌ رساليةٌ<br><span>في قلب كربلاء المقدسة</span></h2>
-                <p class="about-desc">مدرسةُ الإمامين الجوادين للعلوم الدينية مدرسةٌ حوزويةٌ تابعةٌ لممثّلية المرجع الديني الأعلى السيد السيستاني (دام ظلّه) في مدينة كربلاء المقدسة، ومنضويةٌ تحت لواء الحوزة العلمية في النجف الأشرف. تقع في شارع الشهداء، كربلاء، العراق.</p>
+                <h2 class="about-title">مؤسسةٌ دينيةٌ رساليةٌ في قلب كربلاء المقدسة</h2>
+                <p class="about-desc">مدرسةُ الإمامين الجوادين للعلوم الدينية مدرسةٌ دينيةٌ تابعةٌ لممثّلية المرجع الديني الأعلى السيد السيستاني (دام ظلّه) في مدينة كربلاء المقدسة، ومنضويةٌ تحت لواء الحوزة العلمية في النجف الأشرف. تقع في شارع الشهداء، كربلاء، العراق.</p>
                 <p class="about-desc">تهدف المدرسة إلى إعداد جيلٍ حوزويٍّ رساليٍّ واعٍ، يحمل رسالة أهل البيت (عليهم السلام) ويعمل على نشر معارفهم في المجتمع.</p>
                 <div class="about-features">
-                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-book"></i></div><div class="about-feature-text"><strong>منهج حوزوي رصين</strong>من التمهيدي حتى الكفاية والمكاسب</div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-book"></i></div><div class="about-feature-text"><strong>منهج دراسي رصين</strong>من التمهيدي حتى الكفاية والمكاسب</div></div>
                     <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div><div class="about-feature-text"><strong>أساتذة مؤهلون</strong>نخبة من حوزويي كربلاء والنجف</div></div>
                     <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-star-and-crescent"></i></div><div class="about-feature-text"><strong>تكوين شامل</strong>علمي وأخلاقي ورسالي متكامل</div></div>
                     <div class="about-feature"><div class="about-feature-icon"><i class="fa-solid fa-location-dot"></i></div><div class="about-feature-text"><strong>كربلاء المقدسة</strong>شارع الشهداء – قرب كراج الأحياء</div></div>
@@ -1520,7 +1531,7 @@
     <div class="max-w-7xl mx-auto">
         <!-- Header with improved contrast -->
         <div class="text-center mb-16 reveal">
-            <span class="text-[#D4AF37] text-sm font-bold tracking-[0.2em] uppercase mb-4 block font-['Tajawal']">المسار الأكاديمي</span>
+            <span class="text-[#D4AF37] text-sm font-bold tracking-[0.2em] uppercase mb-4 block font-['Tajawal']">المسار الحوزوي</span>
             <h2 class="text-[#D4AF37] text-4xl md:text-5xl font-['Amiri'] font-bold mb-6">المنهج العلمي المتدرج</h2>
             <div class="w-24 h-1 bg-[#D4AF37] mx-auto mb-8 rounded-full opacity-60"></div>
             <p class="text-[#1A1A1A] max-w-3xl mx-auto leading-loose font-['Tajawal'] text-base md:text-lg">
@@ -1540,7 +1551,7 @@
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">النحو الواضح، الصرف</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">منهاج الصالحين، العقائد</p>
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">المنطق، سيرة الأئمة</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10"> خلاصة المنطق , سيرة الأئمة</p>
                 </div>
                 <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">01</div>
             </div>
@@ -1552,7 +1563,7 @@
                 </div>
                 <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">المنهاج</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">قطر الندى، خلاصة المنطق</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">قطر الندى،  المنطق</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">منهاج الصالحين، الموجز</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">عقائد الإمامية</p>
                 </div>
@@ -1567,8 +1578,8 @@
                 <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">الشرائع</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">شرائع الإسلام</p>
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">أصول الفقه للمظفر</p>
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">شرح ابن عقيل، منطق المظفر</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10"></p>الموجز في اصول الفقه</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">شرح ابن عقيل، الحاشية </p>
                 </div>
                 <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">03</div>
             </div>
@@ -1581,7 +1592,7 @@
                 <h3 class="text-[#D4AF37] font-['Amiri'] text-2xl font-bold mb-4">اللمعة</h3>
                 <div class="space-y-2 text-[#333333] font-['Tajawal'] text-sm leading-relaxed">
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الروضة البهية</p>
-                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الحلقات 1 & 2</p>
+                    <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">الحلقات 2</p>
                     <p class="bg-[#FDFCF0] py-1 px-2 rounded border border-[#D4AF37]/10">البلاغة العربية</p>
                 </div>
                 <div class="absolute top-4 right-4 text-[#D4AF37]/20 font-bold text-3xl">04</div>
@@ -1610,7 +1621,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag"><i class="fa-solid fa-quote-right" style="margin-left:5px;"></i> كلمة المدير</span>
-            <h2 class="section-title">كلمة <span>المدير والمعاون</span></h2>
+            <h2 class="section-title">كلمة المدير والمعاون</h2>
             <div class="section-line"></div>
         </div>
         <div class="words-grid">
@@ -1618,13 +1629,13 @@
                 <div class="word-card-header">
                     <div class="word-avatar"><i class="fa-solid fa-user-tie"></i></div>
                     <div class="word-person-info">
-                        <h3 class="word-person-name">الشيخ عبد الستار</h3>
+                        <h3 class="word-person-name">الشيخ عبد الستار الحسناوي</h3>
                         <span class="word-person-title">مدير مدرسة الإمامين الجوادين</span>
                     </div>
                     <div class="word-quote-icon"><i class="fa-solid fa-quote-right"></i></div>
                 </div>
                 <div class="word-content">
-                    <p>بسم الله الرحمن الرحيم، يسعدنا في مدرسة الإمامين الجوادين للعلوم الدينية أن نرحّب بكم في هذا الصرح العلمي الرسالي، الذي يسعى إلى إعداد جيل واعٍ حامل لرسالة أهل البيت عليهم السلام.</p>
+                    <p>مدرستُنا إحدى المدارس الدينية الحوزوية في مدينة كربلاء المقدّسة، وهي تابعةٌ لممثليّة المرجع الديني الأعلى سماحة السيد السيستاني (مدّ ظلّه الشريف). وقد أخذت على عاتقها رسالةً علميةً وتربويةً سامية، تتمثّل في تنشئة الطلبة وتأهيلهم تأهيلاً علمياً رصيناً، قائمًا على أسسٍ متينة من الفقه والأصول وسائر العلوم الإسلامية، مع العناية بالجوانب الأخلاقية والسلوكية التي تُعدّ ركيزةً أساسيةً في بناء الشخصية العلمية المتكاملة. وتسعى المدرسة إلى إعداد كوادر علمية قادرة على تحمّل مسؤولية التبليغ والإرشاد، وخدمة المجتمع بروحٍ رسالية واعية. وقد أثمرت جهودها في تخريج عددٍ من الطلبة الذين أصبحوا أساتذةً فيها، فيما توجّه آخرون إلى التدريس في مدارس ومعاهد دينية أخرى، مساهمين في نشر العلم وترسيخ معالمه. وبذلك تواصل المدرسة أداء دورها الفاعل في خدمة الحوزة العلمية، والإسهام في حفظ التراث الإسلامي وتعزيزه، بما ينسجم مع توجيهات المرجعية الرشيدة وأهدافها السامية.</p>
                 </div>
                 <div class="word-footer"><div class="word-line"></div><span class="word-date">1447 هـ</span></div>
             </div>
@@ -1638,7 +1649,7 @@
                     <div class="word-quote-icon"><i class="fa-solid fa-quote-right"></i></div>
                 </div>
                 <div class="word-content">
-                    <p>بسم الله الرحمن الرحيم، إنّ مدرسة الإمامين الجوادين تمثّل نموذجاً متميّزاً في التعليم الحوزوي، إذ تجمع بين أصالة المنهج العلمي الحوزوي ورسالية الطالب في المجتمع.</p>
+                    <p>إنّ مدرستنا، إلى جانب اهتمامها البالغ بالدرس والتحصيل العلمي بوصفه المطلب الأوّل لطلبة العلوم الدينية، تُعنى عنايةً خاصة بإعداد الطالب الرسالي المُبلِّغ، القادر على إيصال معارف الشريعة الإسلامية إلى الناس بأسلوبٍ واعٍ ومؤثّر. ومن هذا المنطلق، تعتمد المدرسة على إقامة الدورات التدريبية والورش التعليمية على مدار العام، بما يسهم في تنمية مهارات الطلبة وصقل قدراتهم العلمية والتبليغية. كما تتيح لطلبتها فرص المشاركة في البرامج والدورات التي تُقيمها سائر المعاهد، وورشات العمل التابعة للعتبتين المقدستين في كربلاء المقدسة، تعزيزًا لخبراتهم وانفتاحهم على مجالاتٍ أوسع من التعلم والتجربة. وتحرص المدرسة كذلك على تأهيل نخبةٍ من الطلبة للتدريس، وأخرى للبحث والكتابة، وثالثة للتبليغ والإرشاد، وفقًا لقابلياتهم واستعداداتهم. وتقوم في ذلك كلّه على منهجٍ تربويٍّ متكامل، قائم على التوجيه السليم والبناء الصحيح، بما ينسجم مع شخصية الطالب العلميّة والرساليّة، ويُسهم في إعداد جيلٍ واعٍ يحمل همّ الدين ويؤدي رسالته بإخلاصٍ واقتدار.</p>
                 </div>
                 <div class="word-footer"><div class="word-line"></div><span class="word-date">1447 هـ</span></div>
             </div>
@@ -1651,7 +1662,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag"><i class="fa-solid fa-chalkboard-user" style="margin-left:5px;"></i> الكادر التدريسي</span>
-            <h2 class="section-title">أساتذة <span>مدرسة الإمامين الجوادين</span></h2>
+            <h2 class="section-title">أساتذة مدرسة الإمامين الجوادين</h2>
             <div class="section-line"></div>
             <p class="section-subtitle">نخبةٌ من الأساتذة الحوزويين ذوي الخبرة والكفاءة العالية</p>
         </div>
@@ -1718,7 +1729,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag"><i class="fa-solid fa-circle-question" style="margin-left:5px;"></i> الأسئلة الشائعة</span>
-            <h2 class="section-title">أسئلة <span>يسألها الطلاب</span></h2>
+            <h2 class="section-title">أسئلة يسألها الطلاب</h2>
             <div class="section-line"></div>
         </div>
         <div class="faq-list">
@@ -1738,11 +1749,11 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag"><i class="fa-solid fa-star" style="margin-left:5px;"></i> لماذا مدرستنا</span>
-            <h2 class="section-title">ما يُميّز <span>مدرسة الإمامين الجوادين</span></h2>
+            <h2 class="section-title">ما يُميّز مدرسة الإمامين الجوادين</h2>
             <div class="section-line"></div>
         </div>
         <div class="features-grid">
-            <div class="feature-card reveal"><div class="feature-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div><h3 class="feature-title">منهج حوزوي متكامل</h3><p class="feature-desc">منهجٌ علميٌّ رصينٌ يقوم على تدريس المتون الحوزوية بمختلف مراحلها، بدءاً من التمهيدية حتى الكفاية.</p></div>
+            <div class="feature-card reveal"><div class="feature-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div><h3 class="feature-title">منهج دراسي متكامل</h3><p class="feature-desc">منهجٌ علميٌّ رصينٌ يقوم على تدريس المتون الحوزوية بمختلف مراحلها، بدءاً من التمهيدية حتى الكفاية.</p></div>
             <div class="feature-card reveal reveal-delay-1"><div class="feature-icon-wrap"><i class="fa-solid fa-mosque"></i></div><h3 class="feature-title">تحت إشراف المرجعية</h3><p class="feature-desc">تتبع المدرسة مباشرةً لممثلية المرجع الديني الأعلى السيد السيستاني (دام ظله الوارف) في كربلاء المقدسة.</p></div>
             <div class="feature-card reveal reveal-delay-2"><div class="feature-icon-wrap"><i class="fa-solid fa-users"></i></div><h3 class="feature-title">نخبة من الأساتذة</h3><p class="feature-desc">تضمّ نخبةً من الأساتذة الحوزويين ذوي الخبرة والكفاءة، يُوجّهون الطلاب علمياً وأخلاقياً وروحياً.</p></div>
             <div class="feature-card reveal"><div class="feature-icon-wrap"><i class="fa-solid fa-house"></i></div><h3 class="feature-title">رعاية الطالب الكاملة</h3><p class="feature-desc">تتكفّل المدرسة بالسكن والطعام طوال فترة التحصيل، وتمنح الطالب هديةً شهريةً مناسبة.</p></div>
@@ -1757,7 +1768,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag" style="background:rgba(212,175,55,0.1); color:var(--gold-light);"><i class="fa-solid fa-camera-retro" style="margin-left:5px;"></i> المكتبة المصورة</span>
-            <h2 class="section-title" style="color:var(--white);">جولة في <span>أروقة المدرسة</span></h2>
+            <h2 class="section-title">جولة في أروقة المدرسة</h2>
             <div class="section-line" style="background: linear-gradient(to left, var(--gold), transparent);"></div>
             <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">توثيق حي للحياة الدراسية والفعاليات الروحية والعلمية</p>
         </div>
@@ -1774,7 +1785,7 @@
             <span class="section-tag" style="background:rgba(212,175,55,0.1); color:#D4AF37; border-color:#D4AF37;">
                 <i class="fa-solid fa-star"></i> الإصدارات الثقافية
             </span>
-            <h2 class="section-title" style="color:var(--white);">مجلة <span>مدرسة الإمامين الجوادين</span></h2>
+            <h2 class="section-title magazine-title">مجلة مدرسة الإمامين الجوادين</h2>
             <div class="section-line" style="background: linear-gradient(to left, #D4AF37, transparent);"></div>
             <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">إصدار دوري يعنى بالثقافة الإسلامية والوعي الرسالي، متاح للتصفح المباشر</p>
         </div>
@@ -1835,13 +1846,13 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag"><i class="fa-solid fa-envelope" style="margin-left:5px;"></i> تواصل معنا</span>
-            <h2 class="section-title">نحن في <span>خدمتكم</span></h2>
+            <h2 class="section-title">نحن في خدمتكم</h2>
             <div class="section-line"></div>
             <p class="section-subtitle">يسعدنا استقبال استفساراتكم خلال الدوام الرسمي للمدرسة</p>
         </div>
         <div class="contact-grid">
             <div class="reveal">
-                <p class="contact-intro">مدرسة الإمامين الجوادين للعلوم الدينية في كربلاء المقدسة تفتح أبوابها لكل طالب علم حوزوي راغب في تحصيل العلم الديني.</p>
+                <p class="contact-intro">مدرسة الإمامين الجوادين للعلوم الدينية في كربلاء المقدسة تفتح أبوابها لكل طالب علم حوزوي راغب في تحصيل العلوم الدينية.</p>
                 <div class="contact-items">
                     <div class="contact-item">
                         <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
@@ -1889,7 +1900,7 @@
                 <img src="https://i.ibb.co/8v1WMCg/logo-png.jpg" alt="شعار المدرسة">
                 <div class="footer-logo-text"><h3>مدرسة الإمامين الجوادين<br>للعلوم الدينية</h3></div>
             </div>
-            <p class="footer-brand-desc">صرحٌ حوزويٌّ رساليٌّ في كربلاء المقدسة تابع لممثلية المرجع الأعلى السيد السيستاني (دام ظله).</p>
+            <p class="footer-brand-desc">صرحٌ دينيٌّ رساليٌّ في كربلاء المقدسة تابع لممثلية المرجع الأعلى السيد السيستاني (دام ظله).</p>
             <div class="footer-social">
                 <a href="https://t.me/aljawadin313" target="_blank" title="تيليغرام"><i class="fa-brands fa-telegram"></i></a>
                 <a href="https://www.instagram.com/aljawadin313" target="_blank" title="إنستغرام"><i class="fa-brands fa-instagram"></i></a>
