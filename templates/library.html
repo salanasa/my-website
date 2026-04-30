@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block title %}المكتبة الرقمية - مدرسة الإمامين الجوادين{% endblock %}
+
+{% block extra_css %}
+<style>
+    .library-bg {
+        background-color: #0a0a0b;
+        background-image: radial-gradient(circle at center, #1a1a1c 0%, #0a0a0b 100%);
+    }
+    .dark-academia-card {
+        background: #121214;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .dark-academia-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: #d4af37;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    }
+    .category-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        color: #d4af37;
+    }
+    /* Lightbox Styles */
+    #library-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+    #library-lightbox.active { display: flex; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="library-bg min-h-screen py-16 px-4">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h1 class="text-[#d4af37] text-4xl font-bold mb-4 font-['Amiri']">المكتبة الرقمية الشاملة</h1>
+            <div class="w-24 h-1 bg-[#d4af37] mx-auto opacity-50"></div>
+            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">مجموعة مختارة من الكتب، المجلات، والوثائق البصرية الخاصة بالمدرسة متاحة للتحميل والتصفح.</p>
+        </div>
+
+        <!-- 3-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for item in library_data %}
+            <div class="dark-academia-card rounded-xl overflow-hidden flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="{{ item.cover_image }}" alt="{{ item.title }}" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4">
+                        <span class="category-tag px-3 py-1 rounded-full bg-black/60 backdrop-blur-md">
+                            {{ item.category }}
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <h3 class="text-white text-xl font-bold mb-6 font-['Tajawal']">{{ item.title }}</h3>
+                    
+                    {% if item.type == 'pdf' %}
+                    <a href="{{ item.file_path }}" target="_blank" class="block text-center py-3 bg-[#d4af37] text-black font-bold rounded-lg hover:bg-[#e2c285] transition-colors">
+                        <i class="fa-solid fa-file-pdf ml-2"></i> قراءة أونلاين
+                    </a>
+                    {% else %}
+                    <button onclick="openLibraryLightbox('{{ item.file_path }}')" class="block w-full text-center py-3 border border-[#d4af37] text-[#d4af37] font-bold rounded-lg hover:bg-[#d4af37]/10 transition-colors">
+                        <i class="fa-solid fa-image ml-2"></i> عرض الصورة
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox for Images -->
+<div id="library-lightbox" onclick="closeLibraryLightbox()">
+    <div class="relative max-w-5xl w-full h-full flex items-center justify-center">
+        <button class="absolute top-0 left-0 text-white text-3xl p-4 hover:text-[#d4af37]">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-target" src="" alt="Full view" class="max-w-full max-h-full rounded-lg shadow-2xl border border-[#d4af37]/20">
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function openLibraryLightbox(src) {
+        const lightbox = document.getElementById('library-lightbox');
+        const img = document.getElementById('lightbox-target');
+        img.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLibraryLightbox() {
+        const lightbox = document.getElementById('library-lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLibraryLightbox();
+    });
+</script>
+{% endblock %}
