@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}مجلة المدرسة - مدرسة الإمامين الجوادين{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4">
+    <h1 class="golden-title">مجلة مدرسة الإمامين الجوادين</h1>
+    <p class="text-center text-gray-400 -mt-8 mb-12">تصفح وقم بتحميل الأعداد الدورية الصادرة عن المدرسة</p>
+    
+    <div class="card-grid">
+        <!-- Example Magazine Item -->
+        {% for i in range(3, 0, -1) %}
+        <div class="luxury-card">
+            <div class="relative group">
+                <img src="/static/gallery/mag{{i}}.jpg" class="w-full h-72 object-cover opacity-80 group-hover:opacity-100 transition" alt="العدد {{i}}">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <span class="text-[#D4AF37] border border-[#D4AF37] px-4 py-2">عرض الغلاف</span>
+                </div>
+            </div>
+            <div class="p-6 text-center">
+                <h3 class="text-xl font-bold mb-4">العدد رقم {{i}}</h3>
+                <a href="#" class="inline-block w-full bg-[#D4AF37] text-black font-bold py-2 rounded hover:bg-[#b8962d] transition mb-2">تصفح عبر تليجرام</a>
+                <button class="inline-block w-full border border-[#D4AF37] text-[#D4AF37] py-2 rounded hover:bg-[#D4AF37]/10 transition">تحميل نسخة PDF</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -210,6 +210,39 @@
         transition: var(--transition);
     }
 
+    /* Dropdown Navigation Enhancement */
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .dropdown-content {
+        display: none; position: absolute; background: var(--dark2);
+        min-width: 180px; top: 100%; right: 0; border-radius: 8px;
+        border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: var(--shadow-deep);
+        padding: 10px 0; z-index: 1000; opacity: 0; visibility: hidden;
+        transform: translateY(10px); transition: var(--transition);
+    }
+    .nav-dropdown:hover .dropdown-content {
+        display: block; opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .dropdown-content a {
+        color: rgba(255,255,255,0.7) !important; padding: 10px 20px;
+        font-size: 14px; text-decoration: none; display: block;
+        transition: var(--transition); text-align: right; border-bottom: none !important;
+    }
+    .dropdown-content a:hover { color: #D4AF37 !important; background: rgba(212, 175, 55, 0.05); }
+    .dropdown-content a::after { display: none !important; }
+
+    @media (max-width: 900px) {
+        .nav-dropdown { flex-direction: column; align-items: flex-start; width: 100%; }
+        .nav-dropdown .nav-link { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+        .dropdown-content {
+            position: static; display: none; opacity: 1; visibility: visible;
+            transform: none; box-shadow: none; border: none; width: 100%;
+            padding-right: 20px; background: transparent;
+        }
+        .nav-dropdown.mobile-open .dropdown-content { display: block; }
+        .nav-dropdown.mobile-open .dropdown-toggle i { transform: rotate(180deg); }
+        .nav-dropdown .dropdown-toggle i { transition: transform 0.3s ease; }
+    }
+
     /* =============================================
        POPUP
        =============================================*/
@@ -1410,7 +1443,18 @@
         <a href="#teachers" class="nav-link">الأساتذة</a>
         <a href="#admission" class="nav-link">القبول</a>
         <a href="#faq" class="nav-link">الأسئلة</a>
-        <a href="#school-magazine" class="nav-link">مجلة المدرسة</a>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-link dropdown-toggle" style="color: #D4AF37 !important;">
+                إصدارات المدرسة <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-right: 5px;"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="{{ url_for('magazine') }}">مجلة المدرسة</a>
+                <a href="{{ url_for('books') }}">مؤلفات المدرسة</a>
+                <a href="{{ url_for('research') }}">أبحاث المدرسة</a>
+                <a href="{{ url_for('brochures') }}">بروشورات المدرسة</a>
+                <a href="{{ url_for('articles') }}">مقالات المدرسة</a>
+            </div>
+        </div>
         <a href="#gallery" class="nav-link">المكتبة البصرية</a>
         <a href="#contact" class="nav-link">تواصل</a>
         <button class="dark-toggle" onclick="toggleDark()"><i class="fa-solid fa-moon" id="darkIcon"></i></button>
@@ -2120,6 +2164,23 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') changeLightbox(-1);
     if (e.key === 'ArrowLeft') changeLightbox(1);
     if (e.key === 'Escape') closeLightbox();
+});
+
+// Mobile dropdown toggle for "إصدارات المدرسة"
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-dropdown .dropdown-toggle').forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Only toggle if in mobile view (nav is collapsed)
+            const mainNav = document.getElementById('mainNav');
+            const isMobileView = window.innerWidth <= 900; // Using the same breakpoint as CSS
+            const isNavOpen = mainNav.classList.contains('open');
+            if (isMobileView && isNavOpen) {
+                e.preventDefault(); // Prevent default link behavior
+                const parentDropdown = this.closest('.nav-dropdown');
+                parentDropdown.classList.toggle('mobile-open');
+            }
+        });
+    });
 });
 
 window.addEventListener('load', initGallery);

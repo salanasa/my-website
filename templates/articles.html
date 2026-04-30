@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}مقالات المدرسة - مدرسة الإمامين الجوادين{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-12">
+    <h1 class="golden-title">المقالات والتدوينات العلمية</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="luxury-card p-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-[#c5a059]/10 rounded-full flex items-center justify-center mb-6">
+                <i class="fa-solid fa-pen-nib text-[#c5a059] text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">مقالاتنا</h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-6">
+                ترقبوا نشر مجموعة من المقالات الفكرية والتربوية التي تعنى بالوعي الديني والرسالي.
+            </p>
+            <span class="text-[#c5a059] text-xs font-bold uppercase tracking-widest">تحت الإعداد</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
